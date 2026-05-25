@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Restaurant Module · FPT Spa &amp; Hospitality</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  body { min-height: 100vh; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 32px 40px 80px; }
+
+  /* Top */
+  header.top { display: flex; align-items: center; justify-content: space-between; padding-bottom: 26px; border-bottom: 1px solid var(--line); }
+  header.top .meta { display: flex; gap: 22px; align-items: center; color: var(--ink-3); font-size: 13px; }
+  header.top .meta b { color: var(--ink-1); font-weight: 600; }
+  header.top .pill { padding: 6px 12px; background: var(--primary-100); color: var(--primary-700); border-radius: 999px; font-weight: 600; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; }
+
+  /* Hero */
+  .hero { padding: 56px 0 60px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: flex-end; border-bottom: 1px solid var(--line); }
+  .hero h1 { font-size: clamp(48px, 6.4vw, 92px); line-height: .94; font-weight: 800; letter-spacing: -0.035em; }
+  .hero h1 em { font-style: normal; color: var(--primary); }
+  .hero .lede { color: var(--ink-2); font-size: 18px; line-height: 1.55; max-width: 52ch; margin-top: 22px; }
+  .hero .kicker { font-family: var(--font-mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 18px; }
+
+  .triad { display: flex; gap: 10px; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow-sm); }
+  .triad .sw { flex: 1; aspect-ratio: 1/1.15; border-radius: 12px; display: flex; flex-direction: column; justify-content: space-between; padding: 14px; color: white; font-family: var(--font-mono); font-size: 11px; }
+  .triad .sw.b { background: var(--fpt-blue); }
+  .triad .sw.g { background: var(--fpt-green); }
+  .triad .sw.o { background: var(--fpt-orange); }
+  .triad .sw .role { font-family: var(--font-display); font-weight: 700; font-size: 18px; letter-spacing: -0.01em; }
+  .triad .sw small { opacity: .85; line-height: 1.4; }
+  .principles { margin-top: 16px; font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); letter-spacing: .08em; text-transform: uppercase; display: flex; flex-direction: column; gap: 5px; }
+  .principles span::before { content: "— "; color: var(--primary); }
+
+  /* Apps — primary deliverables */
+  section.apps { padding: 50px 0 0; }
+  section h2.section-h { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); font-family: var(--font-mono); font-weight: 500; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+  section h2.section-h::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+  .apps-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .app-card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 20px;
+    overflow: hidden; text-decoration: none; color: inherit;
+    display: flex; flex-direction: column;
+    transition: transform .25s, box-shadow .25s, border-color .25s;
+    position: relative;
+  }
+  .app-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--primary); }
+  .app-card .arrow { position: absolute; top: 22px; right: 22px; width: 42px; height: 42px; border-radius: 50%; background: var(--ink-1); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 17px; transition: transform .2s, background .2s; z-index: 2;}
+  .app-card:hover .arrow { transform: rotate(-45deg); background: var(--primary);}
+
+  .app-card .preview { aspect-ratio: 16/9; position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+  .app-card .preview.guest { background: linear-gradient(155deg, #D6E7F4 0%, var(--primary) 60%, var(--primary-700) 100%); display: flex; align-items: flex-end; justify-content: center; padding: 28px 28px 0;}
+  .app-card .preview.staff { background: linear-gradient(155deg, var(--bg) 0%, var(--bg-soft) 60%); }
+  .app-card .body { padding: 22px 24px 26px; }
+  .app-card .eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--primary); font-weight: 700; margin-bottom: 6px; }
+  .app-card h3 { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; }
+  .app-card p { color: var(--ink-2); font-size: 14px; margin-top: 10px; line-height: 1.55; }
+  .app-card .features { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+  .app-card .features span { padding: 4px 10px; background: var(--bg); border: 1px solid var(--line); border-radius: 999px; font-size: 11.5px; font-weight: 600; color: var(--ink-2); }
+
+  /* Mini phone preview */
+  .mini-phone {
+    width: 150px; height: 240px; background: var(--ink-1); border-radius: 20px;
+    padding: 5px; box-shadow: var(--shadow-lg);
+  }
+  .mini-phone .s {
+    height: 100%; background: var(--surface); border-radius: 16px; padding: 10px;
+    display: flex; flex-direction: column; gap: 5px;
+  }
+  .mini-phone .s .h { font-family: var(--font-display); font-weight: 800; font-size: 12px; letter-spacing: -0.005em;}
+  .mini-phone .s .card { padding: 8px; background: var(--ink-1); color: #fff; border-radius: 8px;}
+  .mini-phone .s .card .l { font-size: 7px; letter-spacing: .12em; opacity: .6; text-transform: uppercase;}
+  .mini-phone .s .card .v { font-family: var(--font-display); font-weight: 800; font-size: 13px; margin-top: 2px;}
+  .mini-phone .s .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-top: 4px;}
+  .mini-phone .s .grid .cell { height: 26px; border-radius: 5px; background: var(--surface-2);}
+  .mini-phone .s .grid .cell.p { background: var(--primary);}
+  .mini-phone .s .grid .cell.o { background: var(--accent);}
+
+  /* Mini desktop preview */
+  .mini-desktop {
+    width: 100%; height: 100%; background: var(--surface);
+    display: grid; grid-template-rows: 32px 1fr; gap: 0;
+    border-radius: 0; padding: 22px;
+    position: relative;
+  }
+  .mini-desktop::before, .mini-desktop::after, .mini-desktop .lights {
+    content: ''; position: absolute; top: 38px; width: 9px; height: 9px; border-radius: 50%;
+  }
+  .mini-desktop::before { left: 32px; background: #ff5f57;}
+  .mini-desktop::after  { left: 46px; background: #febc2e;}
+  .mini-desktop .lights { left: 60px; background: #28c840;}
+
+  .mini-desktop .chrome {
+    height: 28px; background: var(--surface-2); border-radius: 8px 8px 0 0;
+    border: 1px solid var(--line); border-bottom: 0;
+  }
+  .mini-desktop .body {
+    display: grid; grid-template-columns: 70px 1fr 90px; height: calc(100% - 28px);
+    background: var(--surface); border: 1px solid var(--line); border-radius: 0 0 8px 8px; overflow: hidden;
+  }
+  .mini-desktop .nav { background: var(--bg); padding: 10px 6px; border-right: 1px solid var(--line); display: flex; flex-direction: column; gap: 4px;}
+  .mini-desktop .nav .it { height: 12px; border-radius: 3px; background: var(--surface-2);}
+  .mini-desktop .nav .it.on { background: var(--primary);}
+  .mini-desktop .map { position: relative; padding: 10px;}
+  .mini-desktop .map .dot { position: absolute; width: 16px; height: 16px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--line);}
+  .mini-desktop .rail { background: var(--bg); padding: 10px 6px; border-left: 1px solid var(--line);}
+  .mini-desktop .rail .r { height: 14px; background: var(--surface-2); border-radius: 3px; margin-bottom: 4px;}
+  .mini-desktop .rail .r.on { background: var(--primary);}
+
+  /* Support materials */
+  .support { margin-top: 50px;}
+  .support-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;}
+  .support-card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px; text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; display: flex; flex-direction: column; gap: 10px; min-height: 170px; }
+  .support-card:hover { border-color: var(--primary); transform: translateY(-2px);}
+  .support-card .num { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--primary); font-weight: 600; }
+  .support-card h4 { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: -0.015em; }
+  .support-card p { color: var(--ink-3); font-size: 12.5px; line-height: 1.5; flex: 1; }
+  .support-card .arrow { color: var(--ink-3); align-self: flex-end; }
+
+  /* Footer */
+  .footnote { margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 20px; color: var(--ink-3); font-size: 12px; font-family: var(--font-mono); }
+  .footnote .tagline { font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--ink-1); font-weight: 500; }
+  .footnote .tagline em { color: var(--primary); font-style: normal; }
+
+  @media (max-width: 1100px) {
+    .hero { grid-template-columns: 1fr; }
+    .apps-row { grid-template-columns: 1fr; }
+    .support-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="fpt-mark">FPT <span style="font-weight: 500; color: var(--ink-3); letter-spacing: 0; margin-left: 4px;">Spa &amp; Hospitality</span></div>
+    <div class="meta">
+      <span class="pill">Restaurant Module · v2.0</span>
+      <span>Brief revision <b>v2.0</b></span>
+      <span>May 21, 2026</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="kicker">Module 04 · Dining &amp; Hospitality</div>
+      <h1>Two apps.<br/><em>One restaurant.</em></h1><!-- replaced by Tweaks -->
+      <p class="lede">
+        A dining module embedded in the spa &amp; hospitality platform — a customer-facing guest app and a staff-facing employee console. Connected to PMS, KDS, payments and kiosk hardware; designed in the FPT visual identity throughout.
+      </p>
+    </div>
+    <div>
+      <div class="triad" aria-label="FPT brand triad">
+        <div class="sw b"><span class="role">Blue</span><small>#0066B3<br/>Primary</small></div>
+        <div class="sw g"><span class="role">Green</span><small>#008C44<br/>Success</small></div>
+        <div class="sw o"><span class="role">Orange</span><small>#F37021<br/>Accent</small></div>
+      </div>
+      <div class="principles">
+        <span>Clarity over density</span>
+        <span>Accessibility first · WCAG 2.1 AA</span>
+        <span>Consistent across surfaces</span>
+        <span>Graceful degradation</span>
+        <span>Staff efficiency</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="apps">
+    <h2 class="section-h">Standalone apps · live prototypes</h2>
+    <div class="apps-row">
+
+      <a class="app-card" href="guest.html">
+        <span class="arrow">↗</span>
+        <div class="preview guest">
+          <div class="mini-phone">
+            <div class="s">
+              <div style="height: 10px; background: var(--surface-2); border-radius: 5px; width: 30%;"></div>
+              <div class="h">Linh.</div>
+              <div class="card">
+                <div class="l">TONIGHT</div>
+                <div class="v">Lagoon Terrace</div>
+              </div>
+              <div class="grid">
+                <div class="cell p"></div>
+                <div class="cell"></div>
+                <div class="cell o"></div>
+                <div class="cell"></div>
+              </div>
+              <div style="height: 6px; background: var(--line); border-radius: 3px; width: 80%; margin-top: 4px;"></div>
+              <div style="height: 6px; background: var(--line); border-radius: 3px; width: 60%;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="eyebrow">App 01 · Guest</div>
+          <h3>Guest app · iOS</h3>
+          <p>The customer-facing surface — pre-arrival booking, allergen-aware menus, reservations, room service, packed lunch and active order tracking. Three guest profiles (all-inclusive, walk-in, assisted) drive the same flow.</p>
+          <div class="features">
+            <span>3 scenarios</span>
+            <span>4 main flows</span>
+            <span>Fully clickable</span>
+            <span>Allergen logic</span>
+            <span>iOS frame · desktop showcase</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="app-card" href="employee.html">
+        <span class="arrow">↗</span>
+        <div class="preview staff">
+          <div class="mini-desktop">
+            <span class="lights"></span>
+            <div class="chrome"></div>
+            <div class="body">
+              <div class="nav">
+                <div class="it on"></div>
+                <div class="it"></div>
+                <div class="it"></div>
+                <div class="it"></div>
+                <div class="it"></div>
+              </div>
+              <div class="map">
+                <div class="dot" style="left: 16%; top: 24%;"></div>
+                <div class="dot" style="left: 36%; top: 18%; background: var(--ink-1); border-color: var(--ink-1);"></div>
+                <div class="dot" style="left: 56%; top: 24%; background: var(--accent); border-color: var(--accent);"></div>
+                <div class="dot" style="left: 78%; top: 18%;"></div>
+                <div class="dot" style="left: 22%; top: 50%;"></div>
+                <div class="dot" style="left: 44%; top: 52%; background: var(--primary); border-color: var(--primary); box-shadow: 0 0 0 4px rgba(0,102,179,.18);"></div>
+                <div class="dot" style="left: 66%; top: 50%;"></div>
+                <div class="dot" style="left: 28%; top: 76%;"></div>
+                <div class="dot" style="left: 52%; top: 78%;"></div>
+                <div class="dot" style="left: 72%; top: 76%; background: var(--accent); border-color: var(--accent);"></div>
+              </div>
+              <div class="rail">
+                <div class="r on"></div>
+                <div class="r"></div>
+                <div class="r"></div>
+                <div class="r"></div>
+                <div class="r"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="eyebrow">App 02 · Employee</div>
+          <h3>Employee console · Desktop</h3>
+          <p>The staff-facing surface — live floor plan, reservation manager, KDS-bridged order queue, room-service tracker, kiosk activity, guest profiles and menu editor. Every button works; modals close.</p>
+          <div class="features">
+            <span>8 views</span>
+            <span>4 working modals</span>
+            <span>Real state &amp; actions</span>
+            <span>86 menu items live</span>
+            <span>Web · 1280+ wide</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="support">
+    <h2 class="section-h">Supporting materials</h2>
+    <div class="support-grid">
+      <a class="support-card" href="kiosk.html">
+        <div class="num">Surface 03 · Kiosk</div>
+        <h4>Self-service kiosk</h4>
+        <p>NFC tap-in at the door. Three states: welcome, detected, arrived.</p>
+        <span class="arrow">→</span>
+      </a>
+      <a class="support-card" href="flow.html">
+        <div class="num">01 · Flow</div>
+        <h4>User flow diagram</h4>
+        <p>Swim-lane journey across guest, employee &amp; system through five phases.</p>
+        <span class="arrow">→</span>
+      </a>
+      <a class="support-card" href="wireframes.html">
+        <div class="num">02 · Wireframes</div>
+        <h4>Wireframes · 3 directions</h4>
+        <p>Lo-fi explorations of guest home, menu, seat map, console &amp; kiosk.</p>
+        <span class="arrow">→</span>
+      </a>
+      <a class="support-card" href="deck.html">
+        <div class="num">05 · Deck</div>
+        <h4>Stakeholder deck</h4>
+        <p>12-slide narrative — brief, principles, surfaces, integrations, next.</p>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <div class="footnote">
+    <div class="tagline" id="tagline">Imagine. Innovate. <em>Lead.</em></div>
+    <div>FPT Digital Branding Guideline v2.0 · Restaurant Module · Internal</div>
+  </div>
+
+</div>
+
+<div id="tweaks-mount"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel">
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "accent": "#0066B3",
+  "dark": false,
+  "headline": "two",
+  "showTriad": true,
+  "density": "cozy"
+}/*EDITMODE-END*/;
+
+const ACCENT_OPTIONS = ['#0066B3', '#F37021', '#008C44', '#3B4A60'];
+
+const HEADLINES = {
+  one:   { line1: 'One module.', line2: 'Two apps.' },
+  two:   { line1: 'Two apps.',   line2: 'One restaurant.' },
+  three: { line1: 'Dining,',     line2: 'embedded.' },
+};
+
+function TweaksApp() {
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+
+  React.useEffect(() => {
+    const root = document.documentElement;
+    // Override primary brand color
+    root.style.setProperty('--primary', t.accent);
+    // Compute matching darker shade approximated by reusing token mapping
+    root.style.setProperty('--fpt-blue', t.accent);
+    root.setAttribute('data-theme', t.dark ? 'dark' : 'light');
+    root.setAttribute('data-density', t.density);
+
+    // Headline
+    const h1 = document.querySelector('.hero h1');
+    if (h1) {
+      const hl = HEADLINES[t.headline] || HEADLINES.two;
+      h1.innerHTML = hl.line1 + '<br/><em>' + hl.line2 + '</em>';
+    }
+
+    // Triad visibility
+    const triad = document.querySelector('.triad');
+    if (triad) triad.style.display = t.showTriad ? 'flex' : 'none';
+  }, [t]);
+
+  return (
+    <TweaksPanel title="Tweaks">
+      <TweakSection label="Brand">
+        <TweakColor label="Accent" value={t.accent} options={ACCENT_OPTIONS} onChange={v => setTweak('accent', v)}/>
+      </TweakSection>
+      <TweakSection label="Surface">
+        <TweakToggle label="Dark mode" value={t.dark} onChange={v => setTweak('dark', v)}/>
+        <TweakRadio label="Density" value={t.density} onChange={v => setTweak('density', v)} options={[
+          { value: 'compact', label: 'Compact' },
+          { value: 'cozy',    label: 'Cozy' },
+          { value: 'comfy',   label: 'Comfy' },
+        ]}/>
+      </TweakSection>
+      <TweakSection label="Hero">
+        <TweakSelect label="Headline" value={t.headline} onChange={v => setTweak('headline', v)} options={[
+          { value: 'one',   label: 'One module. Two apps.' },
+          { value: 'two',   label: 'Two apps. One restaurant.' },
+          { value: 'three', label: 'Dining, embedded.' },
+        ]}/>
+        <TweakToggle label="Show colour triad" value={t.showTriad} onChange={v => setTweak('showTriad', v)}/>
+      </TweakSection>
+    </TweaksPanel>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('tweaks-mount')).render(<TweaksApp/>);
+</script>
+</body>
+</html>

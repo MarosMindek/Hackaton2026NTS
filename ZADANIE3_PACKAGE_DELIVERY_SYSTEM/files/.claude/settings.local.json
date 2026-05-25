@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ' *)",
+      "WebFetch(domain:services-eu1.arcgis.com)",
+      "Bash(powershell -Command \"\\(Get-Content 'c:\\\\hackath\\\\delivery-app\\\\backend\\\\data\\\\geocoded.json' | Measure-Object -Line\\).Lines\")"
+    ]
+  }
+}

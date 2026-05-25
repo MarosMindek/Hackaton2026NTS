@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kiosk · FPT Restaurant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<script src="i18n.js"></script>
+<style>
+  body { background: var(--surface-2); font-family: var(--font-body);}
+  .stage { min-height: 100vh; display:flex; flex-direction:column; align-items:center; padding: 24px 24px 60px; gap: 20px;}
+  .topbar { width: 100%; max-width: 1200px; display:flex; align-items:center; justify-content: space-between;}
+  .topbar a.back { text-decoration:none; color: var(--ink-2); font-size: 13px; padding: 8px 14px; border-radius: var(--r-pill); background: var(--surface-1); border:1px solid var(--surface-line);}
+  .topbar .title { font-family: var(--font-mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color: var(--ink-3);}
+
+  /* Kiosk frame */
+  .kiosk-frame {
+    width: 720px; height: 1080px;
+    background: #E6ECF3;
+    border-radius: 36px;
+    padding: 38px;
+    box-shadow: 0 60px 120px -40px rgba(13,27,46,.22), 0 0 0 6px #C8D2DF, 0 0 0 8px #B7C3D4;
+    position: relative;
+    overflow: hidden;
+    color: var(--ink-1);
+  }
+  .kiosk-frame::before {
+    content: '';
+    position: absolute; top: 14px; left: 50%; transform: translateX(-50%);
+    width: 60px; height: 6px; background: #B7C3D4; border-radius: 3px;
+  }
+  .kiosk-screen {
+    height: 100%; background: var(--surface-0); border-radius: 12px; overflow: hidden;
+    display: flex; flex-direction: column; position: relative;
+  }
+
+  .kiosk-stage-pick {
+    display: flex; gap: 6px; padding: 5px; background: var(--surface-1); border-radius: 999px; border: 1px solid var(--surface-line);
+  }
+  .kiosk-stage-pick button { padding: 8px 14px; border-radius: 999px; border: 0; background: transparent; cursor: pointer; font-family: inherit; font-size: 13px; font-weight: 600; color: var(--ink-3);}
+  .kiosk-stage-pick button.active { background: var(--ink-1); color: #fff;}
+
+  /* Common kiosk screen styles */
+  .k-head { padding: 36px 40px 0; display:flex; justify-content:space-between; align-items:center;}
+  .k-brand { font-family: var(--font-display); font-weight: 800; font-size: 22px; letter-spacing:-0.015em; display: flex; align-items: center; gap: 10px;}
+  .k-brand .dot { width: 24px; height: 24px; border-radius: 7px; background: conic-gradient(var(--fpt-orange) 0 33%, var(--fpt-green) 33% 66%, var(--fpt-blue) 66%); }
+  .k-time { font-family: var(--font-mono); font-size: 14px; color: var(--ink-3); letter-spacing:.06em;}
+  .k-lang { font-family: var(--font-mono); font-size: 12px; color: var(--ink-2); padding: 6px 12px; border-radius: 999px; border:1px solid var(--surface-line); background: var(--surface-1); cursor: pointer; user-select: none;}
+  .k-lang:hover { background: var(--surface-2); color: var(--ink-1);}
+
+  .k-body { flex: 1; padding: 0 40px; display: flex; flex-direction: column; overflow: hidden;}
+  .k-foot { padding: 24px 40px 36px; border-top: 1px solid var(--surface-line); display:flex; justify-content:space-between; align-items:center; color: var(--ink-3); font-size: 12px;}
+
+  /* WELCOME screen */
+  .welcome {
+    flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 40px;
+  }
+  .welcome .kicker { font-family: var(--font-mono); font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--fpt-orange); font-weight: 600;}
+  .welcome h1 { font-family: var(--font-display); font-weight: 800; font-size: 76px; line-height: 1.0; letter-spacing: -0.035em; margin: 18px 0 14px; max-width: 14ch; text-wrap: balance;}
+  .welcome p { color: var(--ink-2); font-size: 21px; line-height: 1.5; max-width: 34ch; margin: 0 auto;}
+
+  /* NFC reader */
+  .nfc {
+    margin-top: 60px;
+    width: 320px; height: 320px;
+    border-radius: 50%; border: 2px dashed var(--fpt-orange);
+    display: flex; align-items: center; justify-content: center; position: relative;
+  }
+  .nfc::before, .nfc::after {
+    content: ''; position: absolute; inset: 0; border-radius: 50%;
+    border: 2px solid var(--fpt-orange); opacity: .35;
+    animation: pulse 2s ease-out infinite;
+  }
+  .nfc::after { animation-delay: 1s;}
+  @keyframes pulse { 0% { transform: scale(.6); opacity: .8;} 100% { transform: scale(1.4); opacity: 0;} }
+  .nfc .core { width: 180px; height: 180px; border-radius: 50%; background: var(--fpt-orange); display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 50px -10px rgba(243,112,33,.6);}
+  .nfc .core svg { width: 90px; height: 90px;}
+  .nfc-prompt { margin-top: 36px; font-size: 19px; color: var(--ink-1); font-weight: 600; max-width: 28ch;}
+  .nfc-alt { margin-top: 14px; font-size: 14px; color: var(--ink-3);}
+
+  /* SUCCESS screen */
+  .success-bg {
+    position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 30%, rgba(243,112,33,.15) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .success-card { margin-top: 8px; padding: 36px; background: var(--surface); color: var(--ink-1); border: 1px solid var(--primary-100); border-radius: 24px; position: relative; overflow: hidden; box-shadow: var(--shadow-md);}
+  .success-card::before { content:''; position:absolute; right: -40px; top: -40px; width: 240px; height: 240px; border-radius: 50%; background: radial-gradient(circle, var(--primary-100), transparent 65%);}
+  .success-card .greet { position: relative; font-family: var(--font-mono); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--primary); font-weight: 600;}
+  .success-card .name { position: relative; font-family: var(--font-display); font-weight: 800; font-size: 56px; letter-spacing: -0.025em; line-height: 1.0; margin-top: 8px;}
+  .success-card .meta { position: relative; color: var(--ink-3); font-size: 16px; margin-top: 10px;}
+
+  .seat-block {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 26px;
+  }
+  .seat-cell { background: var(--surface-1); border: 1px solid var(--surface-line); border-radius: 18px; padding: 22px;}
+  .seat-cell .l { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); font-weight: 600;}
+  .seat-cell .v { font-family: var(--font-display); font-weight: 800; font-size: 42px; letter-spacing: -0.025em; line-height: 1; margin-top: 6px; color: var(--ink-1);}
+  .seat-cell .v.accent { color: var(--fpt-orange);}
+  .seat-cell .sub { color: var(--ink-3); font-size: 13px; margin-top: 6px;}
+
+  .flags-list { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap;}
+  .flags-list .chip { padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;}
+  .chip.warn { background: #FDE7E2; color: #B83227;}
+  .chip.green { background: var(--fpt-green-100); color: var(--fpt-green-600);}
+  .chip.blue { background: var(--fpt-blue-100); color: var(--fpt-blue-600);}
+  .chip.orange { background: var(--fpt-orange-100); color: var(--fpt-orange-600);}
+
+  .mini-map { background: var(--surface-1); border: 1px solid var(--surface-line); border-radius: 18px; padding: 16px; margin-top: 16px;}
+  .mini-map .l { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; margin-bottom: 10px;}
+
+  /* CTA buttons */
+  .cta-row { margin-top: 20px; display: flex; gap: 12px;}
+  .cta { flex: 1; padding: 22px; border-radius: 18px; font-family: inherit; font-weight: 700; font-size: 17px; cursor: pointer; border: 0;}
+  .cta.primary { background: var(--fpt-orange); color: #fff;}
+  .cta.ghost { background: var(--surface-1); color: var(--ink-1); border: 1px solid var(--surface-line);}
+
+  /* ARRIVED state — softer, easier-on-the-eyes sage green */
+  .arrived-bg {
+    background: linear-gradient(160deg, #3F7A5C 0%, #356A4F 100%);
+    color: #F2F8F3; flex: 1; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; padding: 60px; text-align: center;
+  }
+  .arrived-bg .ic { width: 140px; height: 140px; border-radius: 50%; border: 3px solid rgba(255,255,255,.32); display: flex; align-items: center; justify-content: center; margin-bottom: 28px; background: rgba(255,255,255,.06);}
+  .arrived-bg h1 { font-family: var(--font-display); font-weight: 800; font-size: 76px; letter-spacing: -0.035em; line-height: .95; margin-bottom: 14px;}
+  .arrived-bg p { font-size: 22px; opacity: .82; max-width: 28ch; line-height: 1.4;}
+  .arrived-bg .seat-pill { margin-top: 36px; padding: 16px 36px; background: rgba(255,255,255,.14); border-radius: 999px; font-family: var(--font-mono); font-size: 19px; letter-spacing: .1em; font-weight: 700;}
+
+  /* Three-card scenes (for option exploration) */
+</style>
+</head>
+<body data-density="cozy">
+
+<div class="stage">
+  <div class="topbar">
+    <a class="back" href="index.html">← Hub</a>
+    <span class="title" id="page-title">04 · Kiosk · Self-service check-in</span>
+    <div></div>
+  </div>
+
+  <div class="kiosk-stage-pick" id="picker"></div>
+
+  <div id="root"></div>
+
+  <div style="max-width: 720px; color: var(--ink-3); font-size: 13px; line-height: 1.6; text-align:center; margin-top: 12px; padding: 0 40px;" id="kiosk-footer-note">
+    Touchless arrival · NFC, RFID and keycard supported. Hostess is alerted automatically if the guest's profile carries an escort or assistance flag.
+  </div>
+</div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel">
+const { useState, useEffect } = React;
+
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "accent": "#0066B3",
+  "stage": "welcome",
+  "scenario": "linh"
+}/*EDITMODE-END*/;
+
+const SCENARIOS = {
+  linh: {
+    name: 'Linh Tran', salutation: 'Welcome back, Linh',
+    party: 4, table: 'A·12', area: 'Lagoon Terrace',
+    pkg: 'All-Inclusive', flags: [
+      { l: 'Peanut · Shellfish', t:'warn'},
+      { l: 'Family · high chair', t:'orange'},
+      { l: '{n} covers · {t}', t:'green', vars: { n: 4, t: '19:30' }},
+    ],
+    walk: '4 min · lift A then terrace path',
+    pre: 3,
+  },
+  hayashi: {
+    name: 'Mr. Hayashi', salutation: 'Welcome, Mr. Hayashi',
+    party: 2, table: 'B·22', area: 'Indoor · Main room',
+    pkg: 'Half-Board', flags: [
+      { l: '♿ Escort booked', t:'blue'},
+      { l: 'Tactile menu ready', t:'blue'},
+      { l: '{n} covers · {t}', t:'green', vars: { n: 2, t: '19:45' }},
+    ],
+    walk: '2 min · companion has been alerted',
+    pre: 0,
+  },
+  external: {
+    name: 'Sara Klein', salutation: 'Welcome, Sara',
+    party: 2, table: 'A·14', area: 'Lagoon Terrace',
+    pkg: 'External · Pay per item', flags: [
+      { l: 'Gluten', t:'warn'},
+      { l: 'Anniversary', t:'orange'},
+      { l: '{n} covers · {t}', t:'green', vars: { n: 2, t: '19:30' }},
+    ],
+    walk: '1 min · terrace entry',
+    pre: 1,
+  },
+};
+
+function App() {
+  const [t_, setLangState] = useLang();
+  const [tweak, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const [stage, setStage] = useState(tweak.stage || 'welcome');
+  const s = SCENARIOS[tweak.scenario] || SCENARIOS.linh;
+  const tr = window.t;
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root.style.setProperty('--g-accent', tweak.accent);
+    root.setAttribute('data-theme', 'light'); // kiosks stay light
+    document.getElementById('picker').innerHTML = '';
+  }, [tweak]);
+
+  // Keep externally-anchored copy in sync with language
+  useEffect(() => {
+    const pt = document.getElementById('page-title');
+    if (pt) pt.textContent = tr('04 · Kiosk · Self-service check-in');
+    const fn = document.getElementById('kiosk-footer-note');
+    if (fn) fn.textContent = tr("Touchless arrival · NFC, RFID and keycard supported. Hostess is alerted automatically if the guest's profile carries an escort or assistance flag.");
+  }, [t_]);
+
+  // Render stage picker into picker div as buttons
+  useEffect(() => {
+    const picker = document.getElementById('picker');
+    picker.innerHTML = '';
+    const stages = [['welcome', tr('Welcome')], ['detected', tr('Detected')], ['arrived', tr('Arrived')]];
+    stages.forEach(([k, l]) => {
+      const b = document.createElement('button');
+      b.textContent = l; b.className = stage === k ? 'active' : '';
+      b.onclick = () => setStage(k);
+      picker.appendChild(b);
+    });
+  }, [stage, t_]);
+
+  return (
+    <>
+      <div data-screen-label={`Kiosk · ${stage}`}>
+        <div className="kiosk-frame">
+          <div className="kiosk-screen">
+            {stage === 'welcome' && <WelcomeScreen onTap={()=>setStage('detected')}/>}
+            {stage === 'detected' && <DetectedScreen s={s} onConfirm={()=>setStage('arrived')} onBack={()=>setStage('welcome')}/>}
+            {stage === 'arrived' && <ArrivedScreen s={s} onReset={()=>setStage('welcome')}/>}
+          </div>
+        </div>
+      </div>
+
+      <TweaksPanel title="Tweaks">
+        <TweakSection label="Scenario">
+          <TweakRadio value={tweak.scenario} label="Guest" onChange={v => setTweak('scenario', v)} options={[
+            { value: 'linh', label: 'Linh' },
+            { value: 'hayashi', label: 'Assist' },
+            { value: 'external', label: 'Walk-in' }]}/>
+        </TweakSection>
+        <TweakSection label="Brand">
+          <TweakColor label="Accent" value={tweak.accent}
+            options={['#0066B3', '#F37021', '#008C44', '#7A4D1F']}
+            onChange={v => setTweak('accent', v)}/>
+        </TweakSection>
+        <TweakSection label="Language">
+          <TweakRadio value={t_} label="Locale" onChange={v => setLangState(v)} options={[
+            { value: 'sk', label: 'SK' },
+            { value: 'en', label: 'EN' }]}/>
+        </TweakSection>
+      </TweaksPanel>
+    </>
+  );
+}
+
+function WelcomeScreen({ onTap }) {
+  const tr = window.t;
+  const [lang, setLangState] = useLang();
+  return (
+    <>
+      <div className="k-head">
+        <div className="k-brand"><span className="dot"/>{tr('Lagoon Terrace')}</div>
+        <div style={{display:'flex', gap: 8, alignItems:'center'}}>
+          <div className="k-lang" onClick={() => setLangState(lang === 'sk' ? 'en' : 'sk')}>{lang === 'sk' ? 'SK ⇄ EN' : 'EN ⇄ SK'}</div>
+          <div className="k-time">19:42</div>
+        </div>
+      </div>
+
+      <div className="welcome">
+        <div className="kicker">{tr('Self check-in')}</div>
+        <h1>{tr('Tap to find your table.')}</h1>
+        <p>{tr("Wristband, keycard or phone — we'll pull up your reservation and show you the way.")}</p>
+
+        <div className="nfc" onClick={onTap} role="button" style={{cursor:'pointer'}}>
+          <div className="core">
+            <svg viewBox="0 0 90 90" fill="none">
+              <path d="M22 30 Q45 30 45 45" stroke="#fff" strokeWidth="6" strokeLinecap="round"/>
+              <path d="M30 30 Q60 30 60 45 Q60 60 45 60" stroke="#fff" strokeWidth="6" strokeLinecap="round"/>
+              <path d="M38 30 Q75 30 75 45 Q75 75 45 75" stroke="#fff" strokeWidth="6" strokeLinecap="round"/>
+              <circle cx="25" cy="60" r="6" fill="#fff"/>
+            </svg>
+          </div>
+        </div>
+
+        <div className="nfc-prompt">{tr('Tap the orange ring')}</div>
+        <div className="nfc-alt">{tr('or use the keypad below · Manual lookup')}</div>
+      </div>
+
+      <div className="k-foot">
+        <span>{tr('FPT Spa & Hospitality · v2.0')}</span>
+        <span>{tr('Need help? Press the green button to call a host.')}</span>
+      </div>
+    </>
+  );
+}
+
+function DetectedScreen({ s, onConfirm, onBack }) {
+  const tr = window.t;
+  return (
+    <>
+      <div className="success-bg"/>
+      <div className="k-head">
+        <div className="k-brand"><span className="dot"/>{tr('Lagoon Terrace')}</div>
+        <div className="k-time">19:42</div>
+      </div>
+
+      <div className="k-body">
+        <div className="success-card">
+          <div className="greet">{tr('Hello')}</div>
+          <div className="name">{tr(s.salutation)}.</div>
+          <div className="meta">{tr(s.pkg)} · {tr('Suite')} 4127</div>
+        </div>
+
+        <div className="seat-block">
+          <div className="seat-cell">
+            <div className="l">{tr('Your table')}</div>
+            <div className="v accent">{s.table}</div>
+            <div className="sub">{s.area} · {tr('Window seat')}</div>
+          </div>
+          <div className="seat-cell">
+            <div className="l">{tr('Party')}</div>
+            <div className="v">{s.party}</div>
+            <div className="sub">{s.pre} {tr('pre-ordered items')}</div>
+          </div>
+        </div>
+
+        <div className="flags-list">
+          {s.flags.map((f,i) => <span key={i} className={`chip ${f.t}`}>{f.t === 'warn' ? '⚠ ' : ''}{tr(f.l, f.vars)}</span>)}
+        </div>
+
+        <div className="mini-map">
+          <div className="l">{tr('Walk · ')}{tr(s.walk)}</div>
+          <svg viewBox="0 0 600 130" style={{width:'100%', height:'auto', display:'block'}}>
+            <rect x="20" y="50" width="80" height="50" rx="6" fill="#F3EEE6" stroke="#C9BFAE"/>
+            <text x="60" y="80" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="11" fill="#7A6E63">{tr('KIOSK')}</text>
+            <rect x="240" y="50" width="100" height="50" rx="6" fill="#F3EEE6" stroke="#C9BFAE"/>
+            <text x="290" y="80" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="11" fill="#7A6E63">{tr('LIFT A')}</text>
+            <rect x="460" y="35" width="120" height="80" rx="6" fill="#FCEADC" stroke="#F37021"/>
+            <text x="520" y="70" textAnchor="middle" fontFamily="Plus Jakarta Sans" fontSize="14" fontWeight="700" fill="#DD5E12">{s.table}</text>
+            <text x="520" y="90" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="#7A6E63" letterSpacing="1.5">{tr('YOUR TABLE')}</text>
+            <path d="M100 75 L240 75 M340 75 L460 75" stroke="#F37021" strokeWidth="3.5" strokeLinecap="round" strokeDasharray="6 8">
+              <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="1.5s" repeatCount="indefinite"/>
+            </path>
+          </svg>
+        </div>
+
+        <div className="cta-row">
+          <button className="cta ghost" onClick={onBack}>{tr('Not me')}</button>
+          <button className="cta primary" onClick={onConfirm}>{tr('Confirm arrival · Light my way')}</button>
+        </div>
+      </div>
+
+      <div className="k-foot">
+        <span>{tr('Card detected at {time} · {name} · End ••32A', { time: '19:42', name: 'Linh' })}</span>
+        <span>{tr('Auto-confirms in 12s')}</span>
+      </div>
+    </>
+  );
+}
+
+function ArrivedScreen({ s, onReset }) {
+  const tr = window.t;
+  useEffect(() => {
+    const t = setTimeout(onReset, 6000);
+    return () => clearTimeout(t);
+  }, []);
+  return (
+    <div className="arrived-bg">
+      <div className="ic">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+          <circle cx="40" cy="40" r="36" stroke="rgba(255,255,255,.4)" strokeWidth="3"/>
+          <path d="M22 42l12 12 24-28" stroke="#fff" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </div>
+      <div style={{fontFamily:'JetBrains Mono', fontSize: 14, letterSpacing: '.18em', textTransform:'uppercase', opacity: .8, marginBottom: 14}}>{tr('Arrival confirmed')}</div>
+      <h1>{tr('Your hostess is on the way.')}</h1>
+      <p>{tr('Path-lights to')} {s.table} {tr('are now on. Follow the orange floor.')}</p>
+      <div className="seat-pill">{s.table} · {s.area}</div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+
+</body>
+</html>

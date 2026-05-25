@@ -1,0 +1,6 @@
+# KnihaPlus dependencies
+# Python 3.8+
+# No external dependencies required for core functionality
+# Optional:
+# flask==2.3.0        # for web interface
+# pytest==7.4.0       # for testing

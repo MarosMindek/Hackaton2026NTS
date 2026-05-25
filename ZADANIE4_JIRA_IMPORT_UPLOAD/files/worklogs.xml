@@ -1,0 +1,1930 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<worklogs generated="2026-05-21T16:44:20.902155">
+  <worklog id="1" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-04</date>
+    <hours>6.50</hours>
+    <timeSpentSeconds>23400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP AUTH HBA &amp; IT Audit</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="2" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-04</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>KTLO - INC01482978: Monitoring FI-AA - RE-FX LM: Fehler bei Umbuchung</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="3" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-04</date>
+    <hours>0.50</hours>
+    <timeSpentSeconds>1800</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>KTLO Rx4 - Status AA Alignment Call</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="4" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-32</issueKey>
+    <issueId>10031</issueId>
+    <date>2026-05-04</date>
+    <hours>0.50</hours>
+    <timeSpentSeconds>1800</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SM131759</description>
+    <author>Roman.Kroupa</author>
+    <fullName>Roman Kroupa</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="5" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-32</issueKey>
+    <issueId>10031</issueId>
+    <date>2026-05-04</date>
+    <hours>0.50</hours>
+    <timeSpentSeconds>1800</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SM131738</description>
+    <author>Roman.Kroupa</author>
+    <fullName>Roman Kroupa</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="6" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-32</issueKey>
+    <issueId>10031</issueId>
+    <date>2026-05-04</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SM131705</description>
+    <author>Roman.Kroupa</author>
+    <fullName>Roman Kroupa</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="7" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-04</date>
+    <hours>0.75</hours>
+    <timeSpentSeconds>2700</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SP6-ID 128162 - Alignment FB/IT</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="8" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-33</issueKey>
+    <issueId>10032</issueId>
+    <date>2026-05-04</date>
+    <hours>0.50</hours>
+    <timeSpentSeconds>1800</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>RWE ASC II - Operation Meeting (Managed Services)</description>
+    <author>KollarcikovaA</author>
+    <fullName>Kollarcikova Alzbeta</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="9" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-04</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP SF Foundation</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="10" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-34</issueKey>
+    <issueId>10033</issueId>
+    <date>2026-05-04</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>AA Alignment meeting - 1 hod</description>
+    <author>Veronika.Mikulakova</author>
+    <fullName>Veronika Mikulakova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="11" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-35</issueKey>
+    <issueId>10034</issueId>
+    <date>2026-05-04</date>
+    <hours>2.00</hours>
+    <timeSpentSeconds>7200</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>CITS AddServ RES- SM0000131876
+- 2</description>
+    <author>Dasa.Krompaska</author>
+    <fullName>Dasa Krompaska</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="12" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-36</issueKey>
+    <issueId>10035</issueId>
+    <date>2026-05-04</date>
+    <hours>3.00</hours>
+    <timeSpentSeconds>10800</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>INC01490238/Chang: 131783, CC ID not displayed - SNOTE3491207</description>
+    <author>lien.nguyenthi</author>
+    <fullName>Thi Lien Nguyen</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="13" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-37</issueKey>
+    <issueId>10036</issueId>
+    <date>2026-05-04</date>
+    <hours>6.50</hours>
+    <timeSpentSeconds>23400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>tax, race</description>
+    <author>Silvia.Horvatova</author>
+    <fullName>Silvia Horvatova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="14" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-05</date>
+    <hours>6.50</hours>
+    <timeSpentSeconds>23400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP AUTH HBA &amp; IT Audit</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="15" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-05</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>KTLO - Infosession Solution Manager 
+(Agile Delivery Teams)</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="16" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-05</date>
+    <hours>1.50</hours>
+    <timeSpentSeconds>5400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>KTLO Rx4 - Analyse
+INC01480850 - Dumps Fiori</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="17" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-33</issueKey>
+    <issueId>10032</issueId>
+    <date>2026-05-05</date>
+    <hours>1.50</hours>
+    <timeSpentSeconds>5400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>Chapter Controlling / interne Abstimmung, Infosession Solution Manager (Agile Delivery Teams) - Option 1 - DE</description>
+    <author>KollarcikovaA</author>
+    <fullName>Kollarcikova Alzbeta</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="18" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-05</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP SF Foundation</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="19" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-35</issueKey>
+    <issueId>10034</issueId>
+    <date>2026-05-05</date>
+    <hours>2.00</hours>
+    <timeSpentSeconds>7200</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>CITS/SAP Core Rx4 add.Serv.- Meetings
+- 2</description>
+    <author>Dasa.Krompaska</author>
+    <fullName>Dasa Krompaska</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="20" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-36</issueKey>
+    <issueId>10035</issueId>
+    <date>2026-05-05</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>131705, Cytric Reisekosten-Report UK</description>
+    <author>lien.nguyenthi</author>
+    <fullName>Thi Lien Nguyen</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="21" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-37</issueKey>
+    <issueId>10036</issueId>
+    <date>2026-05-05</date>
+    <hours>8.00</hours>
+    <timeSpentSeconds>28800</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>tax, race</description>
+    <author>Silvia.Horvatova</author>
+    <fullName>Silvia Horvatova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="22" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-06</date>
+    <hours>6.50</hours>
+    <timeSpentSeconds>23400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP AUTH HBA &amp; IT Audit</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="23" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-06</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>KTLO Rx1 - Object Analyses - JIVs for RWE Intern</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="24" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-06</date>
+    <hours>0.50</hours>
+    <timeSpentSeconds>1800</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>Rx4 Analyse
+Neue BWA Z17 – Abgang mit Erlös §6b Rücklage Grundstücke</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="25" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-06</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>KTLO Rx4 - INC01482978: Monitoring FI-AA - RE-FX LM: Fehler bei Umbuchung -&gt; Re-Test</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="26" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-06</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP SF Foundation</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="27" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-35</issueKey>
+    <issueId>10034</issueId>
+    <date>2026-05-06</date>
+    <hours>2.00</hours>
+    <timeSpentSeconds>7200</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>CITS AddServ RWE AG- SM0000131876</description>
+    <author>Dasa.Krompaska</author>
+    <fullName>Dasa Krompaska</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="28" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-37</issueKey>
+    <issueId>10036</issueId>
+    <date>2026-05-06</date>
+    <hours>7.00</hours>
+    <timeSpentSeconds>25200</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>tax, race</description>
+    <author>Silvia.Horvatova</author>
+    <fullName>Silvia Horvatova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="29" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-07</date>
+    <hours>6.50</hours>
+    <timeSpentSeconds>23400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP AUTH HBA &amp; IT Audit</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="30" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-07</date>
+    <hours>0.75</hours>
+    <timeSpentSeconds>2700</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>GLOBAL SP6-ID 131824 
+FI-AA: New KeyFigure Group Z001</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="31" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-07</date>
+    <hours>1.25</hours>
+    <timeSpentSeconds>4500</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>KTLO INC01493961 
+RP4_100 RE-FX/AA: Datum ÜWE auslösen (Liegenschaftsmanagement) - Fehler Mengenermittlung</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="32" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-07</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP SF Foundation</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="33" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-38</issueKey>
+    <issueId>10037</issueId>
+    <date>2026-05-07</date>
+    <hours>2.00</hours>
+    <timeSpentSeconds>7200</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>INC01482978</description>
+    <author>Jakub.Martinek</author>
+    <fullName>Jakub Martinek</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="34" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-35</issueKey>
+    <issueId>10034</issueId>
+    <date>2026-05-07</date>
+    <hours>4.00</hours>
+    <timeSpentSeconds>14400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>CITS AddServ RES- SM0000131876- 2
+CITS AddServ Power- SM0000126399- 2</description>
+    <author>Dasa.Krompaska</author>
+    <fullName>Dasa Krompaska</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="35" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-37</issueKey>
+    <issueId>10036</issueId>
+    <date>2026-05-07</date>
+    <hours>3.00</hours>
+    <timeSpentSeconds>10800</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>tax, race</description>
+    <author>Silvia.Horvatova</author>
+    <fullName>Silvia Horvatova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="36" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-08</date>
+    <hours>0.50</hours>
+    <timeSpentSeconds>1800</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>KTLO Rx4 INC01480850: 
+FIORI RWE Asset History Sheet Extension</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="37" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-08</date>
+    <hours>2.00</hours>
+    <timeSpentSeconds>7200</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>GLOBAL SP6-ID 131824 
+FI-AA: New KeyFigure Group Z001</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="38" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-33</issueKey>
+    <issueId>10032</issueId>
+    <date>2026-05-08</date>
+    <hours>3.00</hours>
+    <timeSpentSeconds>10800</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>INC01458819</description>
+    <author>KollarcikovaA</author>
+    <fullName>Kollarcikova Alzbeta</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="39" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-35</issueKey>
+    <issueId>10034</issueId>
+    <date>2026-05-08</date>
+    <hours>4.00</hours>
+    <timeSpentSeconds>14400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>GSTPOPS-42420 - 2
+GSTPOPS-45454 - 2</description>
+    <author>Dasa.Krompaska</author>
+    <fullName>Dasa Krompaska</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="40" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-37</issueKey>
+    <issueId>10036</issueId>
+    <date>2026-05-08</date>
+    <hours>8.00</hours>
+    <timeSpentSeconds>28800</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>tax, race</description>
+    <author>Silvia.Horvatova</author>
+    <fullName>Silvia Horvatova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="41" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-32</issueKey>
+    <issueId>10031</issueId>
+    <date>2026-05-11</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SM130853</description>
+    <author>Roman.Kroupa</author>
+    <fullName>Roman Kroupa</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="42" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-34</issueKey>
+    <issueId>10033</issueId>
+    <date>2026-05-11</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>Alignment meeting regarding 131824 - 1 hod</description>
+    <author>Veronika.Mikulakova</author>
+    <fullName>Veronika Mikulakova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="43" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-37</issueKey>
+    <issueId>10036</issueId>
+    <date>2026-05-11</date>
+    <hours>8.00</hours>
+    <timeSpentSeconds>28800</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>race, tax</description>
+    <author>Silvia.Horvatova</author>
+    <fullName>Silvia Horvatova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="44" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-11</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP SF</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="45" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-11</date>
+    <hours>6.50</hours>
+    <timeSpentSeconds>23400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP AUTH HBA &amp; IT Audit</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="46" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-11</date>
+    <hours>1.50</hours>
+    <timeSpentSeconds>5400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>GLOBAL SP6-ID 131824 
+FI-AA: New KeyFigure Group Z001</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="47" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-35</issueKey>
+    <issueId>10034</issueId>
+    <date>2026-05-11</date>
+    <hours>2.00</hours>
+    <timeSpentSeconds>7200</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>CITS AddServ RES- SM0000131876
+- 2</description>
+    <author>Dasa.Krompaska</author>
+    <fullName>Dasa Krompaska</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="48" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-33</issueKey>
+    <issueId>10032</issueId>
+    <date>2026-05-11</date>
+    <hours>0.50</hours>
+    <timeSpentSeconds>1800</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>RWE ASC II - Operation Meeting (Managed Services)</description>
+    <author>KollarcikovaA</author>
+    <fullName>Kollarcikova Alzbeta</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="49" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-11</date>
+    <hours>0.50</hours>
+    <timeSpentSeconds>1800</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>Global SP6-ID 131985 
+FI-AA: Erweiterung RWE FIORI Asset Histo - Extention; Asset-History-Sheet 
+- Analyse / PS-Fields</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="50" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-11</date>
+    <hours>1.50</hours>
+    <timeSpentSeconds>5400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>KTLO Rx4 - INC01480850 - Dumps Analyse RS4_100</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="51" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-32</issueKey>
+    <issueId>10031</issueId>
+    <date>2026-05-12</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SM130853</description>
+    <author>Roman.Kroupa</author>
+    <fullName>Roman Kroupa</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="52" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-37</issueKey>
+    <issueId>10036</issueId>
+    <date>2026-05-12</date>
+    <hours>8.00</hours>
+    <timeSpentSeconds>28800</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>race, tax</description>
+    <author>Silvia.Horvatova</author>
+    <fullName>Silvia Horvatova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="53" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-33</issueKey>
+    <issueId>10032</issueId>
+    <date>2026-05-12</date>
+    <hours>3.00</hours>
+    <timeSpentSeconds>10800</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>131899</description>
+    <author>KollarcikovaA</author>
+    <fullName>Kollarcikova Alzbeta</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="54" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-33</issueKey>
+    <issueId>10032</issueId>
+    <date>2026-05-12</date>
+    <hours>2.00</hours>
+    <timeSpentSeconds>7200</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>Definition Standard Changes CO/PS, Follow Up: CITS Value-Stream-Orientation - Agile Structure, Chapter Controlling / interne Abstimmung</description>
+    <author>KollarcikovaA</author>
+    <fullName>Kollarcikova Alzbeta</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="55" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-12</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP SF</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="56" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-12</date>
+    <hours>6.50</hours>
+    <timeSpentSeconds>23400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP AUTH HBA &amp; IT Audit</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="57" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-12</date>
+    <hours>2.50</hours>
+    <timeSpentSeconds>9000</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>GLOBAL SP6-ID 131824 
+FI-AA: New KeyFigure Group Z001</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="58" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-12</date>
+    <hours>2.50</hours>
+    <timeSpentSeconds>9000</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>Global SP6-ID 131985 
+FI-AA: Erweiterung RWE FIORI Asset Histo - Extention - PS-Fields</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="59" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-34</issueKey>
+    <issueId>10033</issueId>
+    <date>2026-05-13</date>
+    <hours>2.00</hours>
+    <timeSpentSeconds>7200</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>131018 - 2 hod</description>
+    <author>Veronika.Mikulakova</author>
+    <fullName>Veronika Mikulakova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="60" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-37</issueKey>
+    <issueId>10036</issueId>
+    <date>2026-05-13</date>
+    <hours>6.50</hours>
+    <timeSpentSeconds>23400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>race, tax</description>
+    <author>Silvia.Horvatova</author>
+    <fullName>Silvia Horvatova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="61" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-38</issueKey>
+    <issueId>10037</issueId>
+    <date>2026-05-13</date>
+    <hours>4.00</hours>
+    <timeSpentSeconds>14400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SM131032</description>
+    <author>Jakub.Martinek</author>
+    <fullName>Jakub Martinek</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="62" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-13</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP SF</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="63" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-13</date>
+    <hours>6.50</hours>
+    <timeSpentSeconds>23400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP AUTH HBA &amp; IT Audit</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="64" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-13</date>
+    <hours>2.50</hours>
+    <timeSpentSeconds>9000</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>GLOBAL SP6-ID 131824 
+FI-AA: New KeyFigure Group Z001</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="65" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-13</date>
+    <hours>1.50</hours>
+    <timeSpentSeconds>5400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>Global SP6-ID 131985 Extention; Asset-History-Sheet 
+- Analyse / PS-Fields</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="66" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-13</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>Lola - KT - Mentoring
+Effort Estimation for Off-Shore Team - White-List Changes</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="67" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-13</date>
+    <hours>0.75</hours>
+    <timeSpentSeconds>2700</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>KTLO INC01493961 
+RP4_100 RE-FX/AA: Datum ÜWE auslösen (Liegenschaftsmanagement) - Fehler Mengenermittlung</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="68" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-14</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>Global SP6-ID 131985 
+FI-AA: Erweiterung RWE FIORI Asset Histo - Extention</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="69" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-32</issueKey>
+    <issueId>10031</issueId>
+    <date>2026-05-14</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SM131655</description>
+    <author>Roman.Kroupa</author>
+    <fullName>Roman Kroupa</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="70" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-37</issueKey>
+    <issueId>10036</issueId>
+    <date>2026-05-14</date>
+    <hours>2.00</hours>
+    <timeSpentSeconds>7200</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>tax</description>
+    <author>Silvia.Horvatova</author>
+    <fullName>Silvia Horvatova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="71" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-14</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP SF</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="72" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-14</date>
+    <hours>6.50</hours>
+    <timeSpentSeconds>23400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP AUTH HBA &amp; IT Audit</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="73" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-35</issueKey>
+    <issueId>10034</issueId>
+    <date>2026-05-14</date>
+    <hours>4.00</hours>
+    <timeSpentSeconds>14400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>CITS AddServ RES- SM0000131876-  2
+CITS/SAP Core Rx4 add.Serv.- Organisation- 2</description>
+    <author>Dasa.Krompaska</author>
+    <fullName>Dasa Krompaska</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="74" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-14</date>
+    <hours>3.00</hours>
+    <timeSpentSeconds>10800</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>GLOBAL SP6-ID 131824 
+FI-AA: New KeyFigure Group Z001</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="75" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-15</date>
+    <hours>1.50</hours>
+    <timeSpentSeconds>5400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>Global SP6-ID 131985 
+FI-AA: Erweiterung RWE FIORI Asset Histo</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="76" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-15</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>KTLO Rx4 - INC01480850 
+Dumps Analyse RS4_100, Doc</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="77" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-37</issueKey>
+    <issueId>10036</issueId>
+    <date>2026-05-15</date>
+    <hours>4.00</hours>
+    <timeSpentSeconds>14400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>tax, race</description>
+    <author>Silvia.Horvatova</author>
+    <fullName>Silvia Horvatova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="78" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-15</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP SF</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="79" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-15</date>
+    <hours>6.50</hours>
+    <timeSpentSeconds>23400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP AUTH HBA &amp; IT Audit</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="80" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-18</date>
+    <hours>3.00</hours>
+    <timeSpentSeconds>10800</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>Global SP6-ID 131985 
+FI-AA: Erweiterung RWE FIORI Asset Histo</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="81" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-18</date>
+    <hours>2.00</hours>
+    <timeSpentSeconds>7200</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>KTLO Rx4 - INC01480850 - Dumps Analyse RS4_100</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="82" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-18</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP SF</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="83" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-18</date>
+    <hours>6.50</hours>
+    <timeSpentSeconds>23400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP AUTH HBA</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="84" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-36</issueKey>
+    <issueId>10035</issueId>
+    <date>2026-05-18</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>INC01494810/131890, RP4_100 New RID-933390 to/RWE4/OM_CUST_I</description>
+    <author>lien.nguyenthi</author>
+    <fullName>Thi Lien Nguyen</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="85" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-19</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP SF</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="86" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-30</issueKey>
+    <issueId>10029</issueId>
+    <date>2026-05-19</date>
+    <hours>6.50</hours>
+    <timeSpentSeconds>23400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SAP AUTH HBA</description>
+    <author>Viera.Mrazova</author>
+    <fullName>Viera Mrazova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="87" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-19</date>
+    <hours>0.75</hours>
+    <timeSpentSeconds>2700</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>KTLO - INC01500131 RP4_100 RE-FX: Fehler bei Transaktion /RWE4/REFXAA_KAUFPR – Anteiliger Kaufpreis Anlage</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="88" source="JIRA_EXPORT" status="Warning">
+    <issueKey>KAN-31</issueKey>
+    <issueId>10030</issueId>
+    <date>2026-05-19</date>
+    <hours>1.50</hours>
+    <timeSpentSeconds>5400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>Global SP6-ID 131985 Extention; Asset-History-Sheet - Analyse / PS-Fields</description>
+    <author>Gabriela.Princova</author>
+    <fullName>Gabriela Princova</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="89" source="JIRA_EXPORT" status="OK">
+    <issueKey>KAN-36</issueKey>
+    <issueId>10035</issueId>
+    <date>2026-05-19</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>INC01466432/CR 131147: field Tax Currency Translation needs to be changed from 1 to 5 for PL company codes.</description>
+    <author>lien.nguyenthi</author>
+    <fullName>Thi Lien Nguyen</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey>FHSTRWEPOWK</projectKey>
+    <accountKey></accountKey>
+    <wbsElement></wbsElement>
+    <worklistName></worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="90" source="RWE_EXPORT" status="OK">
+    <issueKey>KAN-39</issueKey>
+    <issueId>10038</issueId>
+    <date>2026-01-13</date>
+    <hours>6.00</hours>
+    <timeSpentSeconds>21600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SM128682</description>
+    <author>Jakub Martinek</author>
+    <fullName>Jakub Martinek</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey></projectKey>
+    <accountKey></accountKey>
+    <wbsElement>1300-00529GAA006272914</wbsElement>
+    <worklistName>CITS/TS4 POWER MSF  RE-FX</worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="91" source="RWE_EXPORT" status="OK">
+    <issueKey>KAN-39</issueKey>
+    <issueId>10038</issueId>
+    <date>2026-01-14</date>
+    <hours>2.00</hours>
+    <timeSpentSeconds>7200</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SM128682</description>
+    <author>Jakub Martinek</author>
+    <fullName>Jakub Martinek</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey></projectKey>
+    <accountKey></accountKey>
+    <wbsElement>1300-00529GAA006272914</wbsElement>
+    <worklistName>CITS/TS4 POWER MSF  RE-FX</worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="92" source="RWE_EXPORT" status="OK">
+    <issueKey>KAN-40</issueKey>
+    <issueId>10039</issueId>
+    <date>2026-02-18</date>
+    <hours>2.00</hours>
+    <timeSpentSeconds>7200</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SM130559</description>
+    <author>Jakub Martinek</author>
+    <fullName>Jakub Martinek</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey></projectKey>
+    <accountKey></accountKey>
+    <wbsElement>1300-00168GAA005082506</wbsElement>
+    <worklistName>CITS/Rx4 add.Serv. RWEST</worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="93" source="RWE_EXPORT" status="Warning">
+    <issueKey>KAN-40</issueKey>
+    <issueId>10039</issueId>
+    <date>2026-02-19</date>
+    <hours>2.00</hours>
+    <timeSpentSeconds>7200</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SM130559</description>
+    <author>Jakub Martinek</author>
+    <fullName>Jakub Martinek</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey></projectKey>
+    <accountKey></accountKey>
+    <wbsElement>1300-00168GAA005082506</wbsElement>
+    <worklistName>CITS/Rx4 add.Serv. RWEST</worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="94" source="RWE_EXPORT" status="Warning">
+    <issueKey>KAN-40</issueKey>
+    <issueId>10039</issueId>
+    <date>2026-02-19</date>
+    <hours>4.00</hours>
+    <timeSpentSeconds>14400</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SM129924</description>
+    <author>Jakub Martinek</author>
+    <fullName>Jakub Martinek</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey></projectKey>
+    <accountKey></accountKey>
+    <wbsElement>1300-00168GAA005082506</wbsElement>
+    <worklistName>CITS/Rx4 add.Serv. RWEST</worklistName>
+    <validation>
+      <message>Duplicate: same Issue Key + date detected</message>
+    </validation>
+  </worklog>
+  <worklog id="95" source="RWE_EXPORT" status="OK">
+    <issueKey>KAN-40</issueKey>
+    <issueId>10039</issueId>
+    <date>2026-02-25</date>
+    <hours>1.00</hours>
+    <timeSpentSeconds>3600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SM129924</description>
+    <author>Jakub Martinek</author>
+    <fullName>Jakub Martinek</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey></projectKey>
+    <accountKey></accountKey>
+    <wbsElement>1300-00168GAA005082506</wbsElement>
+    <worklistName>CITS/Rx4 add.Serv. RWEST</worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="96" source="RWE_EXPORT" status="OK">
+    <issueKey>KAN-40</issueKey>
+    <issueId>10039</issueId>
+    <date>2026-02-26</date>
+    <hours>6.00</hours>
+    <timeSpentSeconds>21600</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SM129924</description>
+    <author>Jakub Martinek</author>
+    <fullName>Jakub Martinek</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey></projectKey>
+    <accountKey></accountKey>
+    <wbsElement>1300-00168GAA005082506</wbsElement>
+    <worklistName>CITS/Rx4 add.Serv. RWEST</worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="97" source="RWE_EXPORT" status="OK">
+    <issueKey>KAN-40</issueKey>
+    <issueId>10039</issueId>
+    <date>2026-02-27</date>
+    <hours>8.00</hours>
+    <timeSpentSeconds>28800</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SM129924</description>
+    <author>Jakub Martinek</author>
+    <fullName>Jakub Martinek</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey></projectKey>
+    <accountKey></accountKey>
+    <wbsElement>1300-00168GAA005082506</wbsElement>
+    <worklistName>CITS/Rx4 add.Serv. RWEST</worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="98" source="RWE_EXPORT" status="OK">
+    <issueKey>KAN-40</issueKey>
+    <issueId>10039</issueId>
+    <date>2026-03-03</date>
+    <hours>5.00</hours>
+    <timeSpentSeconds>18000</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SM129924</description>
+    <author>Jakub Martinek</author>
+    <fullName>Jakub Martinek</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey></projectKey>
+    <accountKey></accountKey>
+    <wbsElement>1300-00168GAA005082506</wbsElement>
+    <worklistName>CITS/Rx4 add.Serv. RWEST</worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="99" source="RWE_EXPORT" status="OK">
+    <issueKey>KAN-41</issueKey>
+    <issueId>10040</issueId>
+    <date>2026-03-23</date>
+    <hours>2.00</hours>
+    <timeSpentSeconds>7200</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>SM243427</description>
+    <author>Jakub Martinek</author>
+    <fullName>Jakub Martinek</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey></projectKey>
+    <accountKey></accountKey>
+    <wbsElement>1300-00168GAA005082507</wbsElement>
+    <worklistName>CITS/Rx4 add.Serv. RWETI</worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+  <worklog id="100" source="RWE_EXPORT" status="OK">
+    <issueKey>KAN-42</issueKey>
+    <issueId>10041</issueId>
+    <date>2026-03-25</date>
+    <hours>3.00</hours>
+    <timeSpentSeconds>10800</timeSpentSeconds>
+    <startTime>09:00:00</startTime>
+    <description>REFX-AA LM Interface(Linsy)</description>
+    <author>Jakub Martinek</author>
+    <fullName>Jakub Martinek</fullName>
+    <authorAccountId>712020:4114569a-9ace-4101-be97-73c2fe517af3</authorAccountId>
+    <projectKey></projectKey>
+    <accountKey></accountKey>
+    <wbsElement>1300-00529GAA006272907</wbsElement>
+    <worklistName>TS4_POWER_MSF_Controlling (Hypercare)</worklistName>
+    <validation>
+      <message>OK</message>
+    </validation>
+  </worklog>
+</worklogs>

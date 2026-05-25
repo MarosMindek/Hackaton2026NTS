@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Employee Console · FPT Restaurant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<script src="i18n.js"></script>
+<style>
+  html, body { height: 100%; }
+  body { background: var(--bg); display: flex; flex-direction: column; min-height: 100vh; }
+
+  /* App shell */
+  .app {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 56px 1fr;
+    grid-template-areas: "topbar topbar" "side main";
+    height: 100vh;
+    min-height: 720px;
+  }
+
+  /* Topbar */
+  .topbar {
+    grid-area: topbar;
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; padding: 0 24px;
+    gap: 18px;
+  }
+  .topbar .back { text-decoration: none; color: var(--ink-3); font-size: 13px;
+    padding: 7px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface);
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .topbar .back:hover { color: var(--ink-1); border-color: var(--line-strong);}
+  .topbar .brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 800; font-size: 16px; letter-spacing: -0.015em;}
+  .topbar .brand .b { width: 18px; height: 18px; border-radius: 5px; background: var(--fpt-blue); box-shadow: 2px 2px 0 var(--fpt-orange);}
+  .topbar .property { font-size: 12px; color: var(--ink-3);}
+  .topbar .search {
+    margin-left: auto; display: flex; align-items: center; gap: 8px;
+    background: var(--bg); border: 1px solid var(--line); border-radius: 8px;
+    padding: 6px 10px; width: 320px;
+  }
+  .topbar .search input { border: 0; background: transparent; outline: 0; font-family: inherit; font-size: 13px; flex: 1;}
+  .topbar .clock { font-family: var(--font-mono); font-size: 13px; color: var(--ink-2); letterspacing: .06em; padding: 6px 12px; border-radius: 8px; background: var(--bg);}
+  .topbar .user { display: flex; align-items: center; gap: 10px; padding: 6px 12px 6px 6px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); cursor: pointer;}
+  .topbar .user .av { width: 28px; height: 28px; border-radius: 50%; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 11px;}
+  .topbar .user .name { font-size: 12px; font-weight: 600;}
+
+  /* Side */
+  .side {
+    grid-area: side;
+    background: var(--surface);
+    border-right: 1px solid var(--line);
+    padding: 16px 12px; display: flex; flex-direction: column; gap: 4px;
+    overflow-y: auto;
+  }
+  .side h4 { font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-4); font-weight: 500; padding: 12px 10px 6px; margin: 0; }
+  .side .item {
+    appearance: none; border: 0; cursor: pointer; text-align: left;
+    padding: 10px 12px; border-radius: 8px; font-family: inherit;
+    background: transparent; color: var(--ink-2); font-size: 13.5px; font-weight: 500;
+    display: flex; align-items: center; gap: 10px;
+    transition: background .12s, color .12s;
+  }
+  .side .item .ic { width: 18px; height: 18px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;}
+  .side .item:hover { background: var(--bg);}
+  .side .item.active { background: var(--primary); color: #fff;}
+  .side .item .count { margin-left: auto; font-family: var(--font-mono); font-size: 11px; padding: 1px 7px; border-radius: 999px; background: var(--surface-2); color: var(--ink-3); font-weight: 700;}
+  .side .item.active .count { background: rgba(255,255,255,.18); color: #fff;}
+  .side .item.warn .count { background: var(--err-100); color: var(--err);}
+  .side .footer { margin-top: auto; padding: 12px 10px; font-size: 11px; color: var(--ink-4); border-top: 1px solid var(--line);}
+
+  /* Main */
+  .main { grid-area: main; overflow: auto;}
+
+  /* Modal */
+  .modal-back { position: fixed; inset: 0; background: rgba(13,27,46,.5); backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center; z-index: 80; padding: 32px;}
+  .modal { background: var(--surface); border-radius: 18px; max-width: 760px; width: 100%; box-shadow: var(--shadow-lg); overflow: hidden; max-height: 90vh; display: flex; flex-direction: column;}
+  .modal .mhead { padding: 22px 28px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center;}
+  .modal .mbody { padding: 24px 28px; overflow-y: auto;}
+  .modal .mfoot { padding: 16px 28px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 10px; background: var(--bg);}
+
+  /* Toast */
+  .toast { position: fixed; bottom: 28px; right: 28px; background: var(--ink-1); color: #fff; padding: 14px 18px; border-radius: 12px; font-size: 13.5px; font-weight: 600; z-index: 200; box-shadow: var(--shadow-lg);}
+</style>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="employee-data.jsx"></script>
+<script type="text/babel" src="employee-views.jsx"></script>
+<script type="text/babel" src="employee-app-v2.jsx"></script>
+</body>
+</html>

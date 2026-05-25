@@ -1,0 +1,152 @@
+/* =========================================================
+   FPT Restaurant Module — Design Tokens v2
+   Aligned to FPT Digital Branding Guideline v2.0
+   PRIMARY: FPT Blue — the corporate identity color
+   Sub-brand triad: Blue · Green · Orange
+   ========================================================= */
+
+:root {
+  /* Brand — FPT signature, blue-led */
+  --fpt-blue:    #0066B3;  /* PRIMARY */
+  --fpt-blue-700:#004F8B;
+  --fpt-blue-600:#005A9E;
+  --fpt-blue-400:#3A8ECC;
+  --fpt-blue-200:#9CC1E0;
+  --fpt-blue-100:#D6E7F4;
+  --fpt-blue-50: #EEF5FB;
+
+  --fpt-orange: #F37021;
+  --fpt-orange-700: #C7560E;
+  --fpt-orange-100: #FCEADC;
+  --fpt-green:  #008C44;
+  --fpt-green-700: #006E36;
+  --fpt-green-100: #D6EFE0;
+
+  /* Aliases — semantic */
+  --primary:        var(--fpt-blue);
+  --primary-700:    var(--fpt-blue-700);
+  --primary-100:    var(--fpt-blue-100);
+  --primary-50:     var(--fpt-blue-50);
+  --accent:         var(--fpt-orange);  /* warm action moments */
+  --success:        var(--fpt-green);
+  --warn:           #C77C00;
+  --err:            #B83227;
+  --err-100:        #FBE3DE;
+
+  /* Surface — cool, professional */
+  --bg:       #F4F7FB;
+  --bg-soft:  #EAF0F7;
+  --surface:  #FFFFFF;
+  --surface-2:#F4F7FB;
+  --line:     #D9E1EC;
+  --line-strong: #B7C3D4;
+
+  /* Ink — cool slate */
+  --ink-1: #0D1B2E;
+  --ink-2: #3B4A60;
+  --ink-3: #6B7889;
+  --ink-4: #9AA6B5;
+
+  /* Type */
+  --font-display: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body:    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* Radius */
+  --r-xs: 4px; --r-sm: 8px; --r-md: 12px; --r-lg: 18px; --r-xl: 28px; --r-pill: 999px;
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgba(13,27,46,.05), 0 1px 1px rgba(13,27,46,.04);
+  --shadow-md: 0 8px 24px -8px rgba(13,27,46,.14), 0 2px 4px rgba(13,27,46,.05);
+  --shadow-lg: 0 30px 60px -20px rgba(13,27,46,.28), 0 6px 12px rgba(13,27,46,.06);
+  --shadow-blue: 0 12px 32px -8px rgba(0,102,179,.32);
+
+  /* Layout */
+  --tap: 44px; --gutter: 20px;
+
+  /* Spacing */
+  --s-1: 4px;  --s-2: 8px;  --s-3: 12px;  --s-4: 16px;
+  --s-5: 20px; --s-6: 24px; --s-7: 32px;  --s-8: 40px;
+  --s-9: 56px; --s-10: 72px;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+  --bg:       #0A1424;
+  --bg-soft:  #0F1B2E;
+  --surface:  #15243B;
+  --surface-2:#0F1B2E;
+  --line:     #22324B;
+  --line-strong: #36486A;
+  --ink-1: #F0F5FB;
+  --ink-2: #C5D1E2;
+  --ink-3: #8898AE;
+  --ink-4: #5B6B82;
+  --primary-100: #102B45;
+  --primary-50:  #0B1F35;
+  --fpt-orange-100: #3A2010;
+  --fpt-green-100:  #0F2A1B;
+  --err-100: #2A1612;
+}
+
+/* Density */
+[data-density="compact"] { --tap: 36px; --gutter: 14px;}
+[data-density="cozy"]    { --tap: 44px; --gutter: 20px;}
+[data-density="comfy"]   { --tap: 52px; --gutter: 28px;}
+
+/* Reset-ish */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: var(--font-body);
+  color: var(--ink-1);
+  background: var(--bg);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+h1,h2,h3,h4 { font-family: var(--font-display); letter-spacing: -0.015em; margin: 0; }
+p { margin: 0; }
+a { color: inherit; }
+
+/* FPT mark — blue dot */
+.fpt-mark {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-display); font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.fpt-mark::before {
+  content: "";
+  width: 16px; height: 16px;
+  border-radius: 4px;
+  background: var(--fpt-blue);
+  box-shadow: 2px 2px 0 var(--fpt-orange);
+}
+
+/* Buttons (shared) */
+.btn {
+  appearance: none; border: 0; cursor: pointer;
+  padding: 10px 18px; border-radius: 10px;
+  font-family: inherit; font-weight: 600; font-size: 14px;
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: background .15s, color .15s, transform .1s, box-shadow .15s;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--primary); color: #fff; box-shadow: var(--shadow-blue);}
+.btn-primary:hover { background: var(--primary-700); }
+.btn-ghost { background: transparent; color: var(--ink-1); border: 1px solid var(--line);}
+.btn-ghost:hover { background: var(--surface); border-color: var(--line-strong);}
+.btn-dark { background: var(--ink-1); color: #fff; }
+.btn-warn { background: var(--accent); color: #fff;}
+.btn-danger { background: var(--err); color: #fff;}
+
+.pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 9px; border-radius: var(--r-pill);
+  font-size: 11px; font-weight: 700; letter-spacing: .03em; text-transform: uppercase;
+  background: var(--surface-2); color: var(--ink-2);
+}
+.pill-primary { background: var(--primary-100); color: var(--primary-700);}
+.pill-orange  { background: var(--fpt-orange-100); color: var(--fpt-orange-700);}
+.pill-green   { background: var(--fpt-green-100); color: var(--fpt-green-700);}
+.pill-danger  { background: var(--err-100); color: var(--err);}

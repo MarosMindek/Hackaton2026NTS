@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guest App · FPT Restaurant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<script src="i18n.js"></script>
+<style>
+  body { background: var(--bg); min-height: 100vh; }
+
+  /* Page chrome */
+  .page { display: grid; grid-template-columns: 280px 1fr 320px; min-height: 100vh; }
+
+  /* Left nav */
+  .side {
+    background: var(--surface); border-right: 1px solid var(--line);
+    padding: 28px 22px; display: flex; flex-direction: column; gap: 26px;
+  }
+  .side .brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 800; font-size: 18px; letter-spacing: -0.015em;}
+  .side .brand .b { width: 18px; height: 18px; border-radius: 5px; background: var(--fpt-blue); box-shadow: 2px 2px 0 var(--fpt-orange);}
+  .side h4 { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; margin-bottom: 12px;}
+  .side .back-link { color: var(--ink-3); text-decoration: none; font-size: 13px; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--line); display: inline-flex; align-items: center; gap: 6px; align-self: flex-start;}
+  .side .back-link:hover { background: var(--surface-2); color: var(--ink-1);}
+
+  .scenario-list { display: flex; flex-direction: column; gap: 6px;}
+  .scenario-list .item {
+    appearance: none; border: 0; cursor: pointer; text-align: left;
+    padding: 12px 14px; border-radius: 10px; font-family: inherit;
+    background: transparent; color: var(--ink-2); transition: background .15s, color .15s;
+  }
+  .scenario-list .item:hover { background: var(--surface-2);}
+  .scenario-list .item.active { background: var(--primary); color: #fff;}
+  .scenario-list .item .name { font-weight: 700; font-size: 14px;}
+  .scenario-list .item .meta { font-size: 12px; opacity: .75; margin-top: 2px;}
+
+  .guest-card {
+    padding: 14px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--line);
+  }
+  .guest-card .row { display: flex; justify-content: space-between; font-size: 12px; margin-top: 6px;}
+  .guest-card .row .k { color: var(--ink-3);}
+  .guest-card .row .v { color: var(--ink-1); font-weight: 600;}
+
+  /* Center stage */
+  .stage {
+    display: flex; align-items: center; justify-content: center;
+    padding: 60px 40px;
+    background:
+      radial-gradient(ellipse at 50% 0%, var(--primary-50) 0%, transparent 60%),
+      var(--bg);
+    position: relative;
+  }
+  .stage-head {
+    position: absolute; top: 32px; left: 40px; right: 40px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3);
+  }
+
+  /* Phone frame */
+  .phone {
+    width: 400px; height: 820px;
+    background: var(--ink-1); border-radius: 50px;
+    padding: 14px; box-shadow: var(--shadow-lg);
+    position: relative;
+  }
+  .phone::before {
+    content: ''; position: absolute; top: 22px; left: 50%; transform: translateX(-50%);
+    width: 110px; height: 32px; background: #000; border-radius: 24px; z-index: 100;
+  }
+  .phone .screen {
+    width: 100%; height: 100%; background: var(--bg); border-radius: 38px; overflow: hidden;
+    position: relative; display: flex; flex-direction: column;
+  }
+  .status-bar {
+    height: 54px; display: flex; align-items: center; justify-content: space-between;
+    padding: 0 32px; font-size: 14px; font-weight: 600; color: var(--ink-1);
+    flex-shrink: 0; padding-top: 8px;
+  }
+  .status-bar .right { display: flex; gap: 6px; align-items: center;}
+
+  .app-body { flex: 1; overflow-y: auto; overflow-x: hidden;
+    scrollbar-width: thin;
+  }
+  .app-body::-webkit-scrollbar { width: 4px; }
+  .app-body::-webkit-scrollbar-thumb { background: var(--line); border-radius: 2px;}
+
+  .tabbar {
+    flex-shrink: 0; height: 70px; padding: 8px 0 12px;
+    border-top: 1px solid var(--line); background: var(--surface);
+    display: flex; align-items: center; justify-content: space-around;
+  }
+  .tabbar button {
+    appearance: none; border: 0; background: transparent; cursor: pointer;
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+    font-family: inherit; font-size: 10px; font-weight: 600;
+    color: var(--ink-3); padding: 4px 12px; border-radius: 8px;
+  }
+  .tabbar button.active { color: var(--primary);}
+  .tabbar button.active .ic { background: var(--primary-100);}
+  .tabbar button .ic {
+    width: 36px; height: 26px; border-radius: 8px;
+    background: transparent; display: flex; align-items: center; justify-content: center;
+  }
+  .tabbar button .ic svg { width: 20px; height: 20px;}
+
+  /* Right context panel */
+  .context {
+    background: var(--surface); border-left: 1px solid var(--line);
+    padding: 28px 22px; display: flex; flex-direction: column; gap: 24px;
+  }
+  .context h4 { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; margin-bottom: 12px;}
+
+  .step-list { display: flex; flex-direction: column; gap: 4px;}
+  .step-list .step {
+    padding: 10px 12px; border-radius: 8px; cursor: pointer; font-size: 13px;
+    display: flex; align-items: center; gap: 10px; color: var(--ink-3);
+    border-left: 2px solid transparent;
+  }
+  .step-list .step:hover { background: var(--surface-2);}
+  .step-list .step.active { color: var(--ink-1); font-weight: 600; background: var(--primary-50); border-left-color: var(--primary);}
+  .step-list .step .n { font-family: var(--font-mono); font-size: 11px; color: var(--ink-4); min-width: 18px;}
+  .step-list .step.active .n { color: var(--primary);}
+
+  .info-block {
+    padding: 16px; border-radius: 12px; background: var(--primary-50); border: 1px solid var(--primary-100);
+    font-size: 13px; color: var(--ink-2); line-height: 1.5;
+  }
+  .info-block b { color: var(--primary-700);}
+
+  /* Toast */
+  .toast {
+    position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%);
+    background: var(--ink-1); color: #fff; padding: 12px 18px; border-radius: 12px;
+    font-size: 13px; font-weight: 600; z-index: 200;
+    box-shadow: var(--shadow-lg); animation: rise .25s ease-out;
+  }
+  @keyframes rise { from { opacity: 0; transform: translate(-50%, 10px);} to { opacity: 1; transform: translate(-50%, 0);} }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <aside class="side">
+    <a class="back-link" href="index.html">← Hub</a>
+    <div class="brand"><span class="b"></span>FPT Restaurant</div>
+
+    <div id="lang-switch-host"></div>
+
+    <div>
+      <h4 id="side-h-switch">Switch guest</h4>
+      <div class="scenario-list" id="scenarios"></div>
+    </div>
+
+    <div>
+      <h4 id="side-h-profile">Profile · pulled from PMS</h4>
+      <div class="guest-card" id="profile-card"></div>
+    </div>
+  </aside>
+
+  <main class="stage">
+    <div class="stage-head">
+      <span id="stage-head-label">Guest App · iOS · Pre-arrival → Service</span>
+      <span id="screen-label">Home</span>
+    </div>
+    <div class="phone">
+      <div class="screen">
+        <div class="status-bar">
+          <span>9:41</span>
+          <span class="right">●●● ⚡ 92%</span>
+        </div>
+        <div class="app-body" id="root"></div>
+        <div class="tabbar" id="tabbar"></div>
+      </div>
+    </div>
+  </main>
+
+  <aside class="context">
+    <div>
+      <h4 id="ctx-h-steps">Flow steps</h4>
+      <div class="step-list" id="steps"></div>
+    </div>
+    <div>
+      <h4 id="ctx-h-happening">What's happening</h4>
+      <div class="info-block" id="info"></div>
+    </div>
+    <div>
+      <h4 id="ctx-h-try">Try it</h4>
+      <div id="ctx-try-body" style="font-size: 13px; color: var(--ink-2); line-height: 1.5;">
+        Tap anywhere in the phone — the full flow is interactive. Switch scenarios on the left to see how the experience adapts to all-inclusive, walk-in or assisted-dining guests.
+      </div>
+    </div>
+  </aside>
+</div>
+
+<div id="toast-host"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="guest-data.jsx"></script>
+<script type="text/babel" src="guest-screens-v2.jsx"></script>
+<script type="text/babel" src="guest-app-v2.jsx"></script>
+
+</body>
+</html>

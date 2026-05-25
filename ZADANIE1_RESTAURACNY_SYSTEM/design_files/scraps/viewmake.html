@@ -1,0 +1,24 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>body,html{margin:0;background:#222}canvas{display:block;border-bottom:1px solid #fff}</style></head>
+<body><div id="c"></div>
+<script type="module">
+import * as pdfjs from 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.7.76/build/pdf.min.mjs';
+pdfjs.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.7.76/build/pdf.worker.min.mjs';
+(async () => {
+  try {
+    document.body.insertAdjacentHTML('beforeend','<div style="color:white;padding:8px">loading…</div>');
+    const url = 'https://13f7c9e4-d362-4575-a158-8cc94cc15a14.claudeusercontent.com/v1/design/projects/13f7c9e4-d362-4575-a158-8cc94cc15a14/serve/uploads/make%20sure.pdf?t=8a5a0e12e9bcc653bf72cd8a378b3286315bfda8861b4de7a3ad3cb030b51abd.1e3240dc-3ee8-4638-acbc-f700e2d498b3.d13742b8-493c-479f-8c42-81b4714b70f5.1779360502&direct=1';
+    const pdf = await pdfjs.getDocument(url).promise;
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const vp = page.getViewport({ scale: 1.2 });
+      const canvas = document.createElement('canvas');
+      canvas.width = vp.width; canvas.height = vp.height;
+      document.getElementById('c').appendChild(canvas);
+      await page.render({ canvasContext: canvas.getContext('2d'), viewport: vp }).promise;
+    }
+  } catch (e) {
+    document.body.innerHTML = '<pre style="color:white">' + e.message + '</pre>';
+  }
+})();
+</script></body></html>

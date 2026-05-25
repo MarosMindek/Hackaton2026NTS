@@ -1,0 +1,15 @@
+{
+  "_comment": "Map WBS Element or Worklist Name to a Jira Issue Key",
+  "wbs_to_issue": {
+    "1300-00529GAA006272914": "KAN-39",
+    "1300-00168GAA005082506": "KAN-40",
+    "1300-00168GAA005082507": "KAN-41",
+    "1300-00529GAA006272907": "KAN-42"
+  },
+  "worklist_to_issue": {
+    "CITS/TS4 POWER MSF  RE-FX": "KAN-39",
+    "CITS/Rx4 add.Serv. RWEST": "KAN-40",
+    "CITS/Rx4 add.Serv. RWETI": "KAN-41",
+    "TS4_POWER_MSF_Controlling (Hypercare)": "KAN-42"
+  }
+}

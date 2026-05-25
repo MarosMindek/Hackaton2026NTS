@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Jira Worklog Importer — FPT Software</title>
+<meta name="viewport" content="width=1440" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:         #0e1116;
+    --panel:      #161b22;
+    --panel-2:    #1c2230;
+    --line:       #262d3a;
+    --line-2:     #323b4d;
+    --ink:        #e6edf3;
+    --ink-2:      #9aa6b8;
+    --ink-3:      #6b7588;
+    --accent:     #F37021;    /* warm orange — our own */
+    --accent-2:   #ff8a3d;
+    --ok:         #4ec97a;
+    --warn:       #e6b34a;
+    --err:        #ef5d5d;
+    --info:       #5aa9ff;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:14px;-webkit-font-smoothing:antialiased}
+  body{min-height:100vh}
+  ::selection{background:rgba(243,112,33,.35)}
+  ::-webkit-scrollbar{width:10px;height:10px}
+  ::-webkit-scrollbar-thumb{background:#2a3242;border-radius:10px}
+  ::-webkit-scrollbar-track{background:transparent}
+  button{font-family:inherit}
+</style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script type="text/babel" src="data.jsx"></script>
+  <script type="text/babel" src="logo.jsx"></script>
+  <script type="text/babel" src="terminal.jsx"></script>
+  <script type="text/babel" src="grid.jsx"></script>
+  <script type="text/babel" src="issues.jsx"></script>
+  <script type="text/babel" src="controls.jsx"></script>
+  <script type="text/babel" src="app.jsx"></script>
+</body>
+</html>

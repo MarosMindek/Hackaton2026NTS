@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>User Flow · FPT Restaurant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  body { background: var(--surface-2);}
+  .stage { min-height: 100vh; padding: 24px 24px 60px;}
+  .topbar { max-width: 1480px; margin: 0 auto 22px; display:flex; justify-content:space-between; align-items:center;}
+  .topbar a.back { text-decoration:none; color: var(--ink-2); font-size: 13px; padding: 8px 14px; border-radius: var(--r-pill); background: var(--surface-1); border:1px solid var(--surface-line);}
+  .topbar .title { font-family: var(--font-mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color: var(--ink-3);}
+
+  .head { max-width: 1480px; margin: 0 auto 26px; }
+  .head .kicker { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 6px;}
+  .head h1 { font-family: var(--font-display); font-weight: 800; font-size: 44px; letter-spacing: -0.025em; line-height: 1.05; max-width: 22ch;}
+  .head .lede { color: var(--ink-2); font-size: 16px; line-height: 1.55; margin-top: 12px; max-width: 64ch;}
+
+  .legend { display:flex; gap: 18px; margin-top: 18px; flex-wrap: wrap;}
+  .legend .it { display:inline-flex; gap: 8px; align-items:center; font-size: 12.5px; color: var(--ink-2);}
+  .legend .sw { width: 12px; height: 12px; border-radius: 4px;}
+  .sw.guest { background: var(--fpt-orange);}
+  .sw.staff { background: var(--fpt-blue);}
+  .sw.system { background: var(--ink-1);}
+  .sw.decision { background: #fff; border: 2px solid var(--warn);}
+  .sw.async { background: repeating-linear-gradient(45deg, var(--fpt-green) 0 4px, transparent 4px 8px); border: 1px solid var(--fpt-green);}
+
+  /* Flow board */
+  .board {
+    max-width: 1480px; margin: 0 auto;
+    background: var(--surface-1); border: 1px solid var(--surface-line); border-radius: 24px;
+    overflow: auto;
+  }
+  .board-inner { min-width: 1800px; padding: 28px 32px;}
+
+  /* Phase header */
+  .phases { display: grid; grid-template-columns: 200px repeat(5, 1fr); gap: 0; border-bottom: 1px solid var(--surface-line); padding-bottom: 14px;}
+  .phases > div { padding: 0 12px;}
+  .phases .ph { font-family: var(--font-display); font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: var(--ink-1);}
+  .phases .ph .step { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; color: var(--ink-3); display: block; margin-bottom: 4px; font-weight: 500; text-transform: uppercase;}
+
+  /* Lanes */
+  .lane { display: grid; grid-template-columns: 200px repeat(5, 1fr); gap: 0; padding: 22px 0 22px; border-bottom: 1px dashed var(--surface-line); position: relative;}
+  .lane:last-child { border-bottom: 0;}
+  .lane .title { padding: 0 12px;}
+  .lane .title .l { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); font-weight: 600;}
+  .lane .title h3 { font-family: var(--font-display); font-weight: 800; font-size: 22px; letter-spacing: -0.02em; line-height: 1.1; margin-top: 4px;}
+  .lane .title p { color: var(--ink-3); font-size: 12px; margin-top: 6px; line-height: 1.45;}
+
+  .col { padding: 0 12px; min-height: 90px; display: flex; flex-direction: column; gap: 10px;}
+
+  /* Nodes */
+  .node {
+    background: var(--surface-1); border: 1.5px solid var(--surface-line);
+    border-radius: 12px; padding: 11px 14px;
+    box-shadow: var(--shadow-sm); position: relative;
+  }
+  .node .n { font-weight: 700; font-size: 13.5px; letter-spacing: -0.005em; line-height: 1.3;}
+  .node .m { color: var(--ink-3); font-size: 11.5px; margin-top: 4px; line-height: 1.4;}
+  .node.guest { border-color: var(--fpt-orange); border-left-width: 4px;}
+  .node.staff { border-color: var(--fpt-blue); border-left-width: 4px;}
+  .node.system { background: #1A1714; color: #fff; border-color: #1A1714;}
+  .node.system .m { color: rgba(255,255,255,.65);}
+  .node.decision {
+    background: #fff; border: 2px dashed var(--warn);
+    border-radius: 8px; transform: rotate(0); position: relative;
+  }
+  .node.decision::before {
+    content: ''; position: absolute; left: -8px; top: 50%; width: 8px; height: 8px; background: var(--warn); transform: translateY(-50%) rotate(45deg);
+  }
+  .node.async {
+    background: var(--fpt-green-100); border-color: var(--fpt-green);
+    border-style: dashed;
+  }
+
+  .node .top { display:flex; gap: 6px; margin-bottom: 6px; align-items:center;}
+  .node .pill { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .1em; padding: 2px 6px; border-radius: 999px; background: rgba(0,0,0,.06); color: var(--ink-3); font-weight: 700; text-transform: uppercase;}
+  .node.system .pill { background: rgba(255,255,255,.16); color: rgba(255,255,255,.85);}
+
+  /* Connector arrows between lanes */
+  .connectors { position: absolute; inset: 0; pointer-events: none;}
+
+  /* Phase color washes */
+  .phase-bg { position: absolute; top: 0; bottom: 0; pointer-events: none; opacity: .07;}
+
+  /* Footer scenarios */
+  .scenarios { max-width: 1480px; margin: 36px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;}
+  .scenario { background: var(--surface-1); border: 1px solid var(--surface-line); border-radius: 18px; padding: 22px;}
+  .scenario .l { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 6px; font-weight:600;}
+  .scenario h4 { font-family: var(--font-display); font-weight: 700; font-size: 18px; letter-spacing: -0.015em;}
+  .scenario p { font-size: 13px; color: var(--ink-2); line-height: 1.55; margin-top: 10px;}
+  .scenario .arrow { margin-top: 14px; font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--fpt-orange); font-weight: 600;}
+
+  /* SVG arrows */
+  .arrows-svg { position: absolute; inset: 0; pointer-events: none; width: 100%; height: 100%;}
+</style>
+</head>
+<body data-density="cozy">
+
+<div class="stage">
+  <div class="topbar">
+    <a class="back" href="index.html">← Hub</a>
+    <span class="title">01 · User flow diagram</span>
+    <div></div>
+  </div>
+
+  <div class="head">
+    <div class="kicker">Module 04 · Restaurant · Journey map</div>
+    <h1>One booking, three surfaces, five phases.</h1>
+    <p class="lede">
+      A single reservation flows across the guest's phone, the employee console and the kiosk —
+      with the PMS, KDS and payment gateway exchanging state in the background. This is the canonical happy path; branches for external diners, packed lunches, room service and assisted dining are noted on the right.
+    </p>
+    <div class="legend">
+      <span class="it"><span class="sw guest"></span> Guest action</span>
+      <span class="it"><span class="sw staff"></span> Employee action</span>
+      <span class="it"><span class="sw system"></span> System / integration</span>
+      <span class="it"><span class="sw decision"></span> Decision point</span>
+      <span class="it"><span class="sw async"></span> Async / pre-prepared</span>
+    </div>
+  </div>
+
+  <div class="board">
+    <div class="board-inner">
+      <!-- Phase header -->
+      <div class="phases">
+        <div></div>
+        <div class="ph"><span class="step">01 · Pre-arrival</span>Plan the visit</div>
+        <div class="ph"><span class="step">02 · Arrival</span>Find the seat</div>
+        <div class="ph"><span class="step">03 · Order</span>Place the order</div>
+        <div class="ph"><span class="step">04 · Dine</span>Serve & adjust</div>
+        <div class="ph"><span class="step">05 · Leave</span>Settle & feedback</div>
+      </div>
+
+      <!-- Guest lane -->
+      <div class="lane">
+        <div class="title">
+          <div class="l">Lane A</div>
+          <h3>Guest</h3>
+          <p>On phone, in-room tablet or kiosk. Pulls profile from PMS — never asked for allergies twice.</p>
+        </div>
+        <div class="col">
+          <div class="node guest"><div class="top"><span class="pill">G·01</span></div><div class="n">Open app from welcome email</div><div class="m">Or scan QR at room</div></div>
+          <div class="node guest"><div class="top"><span class="pill">G·02</span></div><div class="n">Browse menu · pre-order</div><div class="m">Allergens auto-hidden</div></div>
+          <div class="node guest"><div class="top"><span class="pill">G·03</span></div><div class="n">Pick time, area, seat</div><div class="m">Or accept suggested seat</div></div>
+        </div>
+        <div class="col">
+          <div class="node guest"><div class="top"><span class="pill">G·04</span></div><div class="n">Tap wristband at kiosk</div><div class="m">NFC · 1 sec</div></div>
+          <div class="node guest"><div class="top"><span class="pill">G·05</span></div><div class="n">Confirm "this is me"</div><div class="m">Sees seat number, walks</div></div>
+        </div>
+        <div class="col">
+          <div class="node guest"><div class="top"><span class="pill">G·06</span></div><div class="n">Pre-order is already in kitchen</div><div class="m">No re-ordering needed</div></div>
+          <div class="node guest"><div class="top"><span class="pill">G·07</span></div><div class="n">Add a course / drink mid-meal</div><div class="m">Same app, same table</div></div>
+        </div>
+        <div class="col">
+          <div class="node guest"><div class="top"><span class="pill">G·08</span></div><div class="n">Server checks in, swaps an item</div><div class="m">No menu re-print</div></div>
+        </div>
+        <div class="col">
+          <div class="node guest"><div class="top"><span class="pill">G·09</span></div><div class="n">Walk out · all-incl, no card</div><div class="m">Or settle on POS · external</div></div>
+          <div class="node guest"><div class="top"><span class="pill">G·10</span></div><div class="n">Receives tasting note &amp; rating prompt</div><div class="m">+24h via app</div></div>
+        </div>
+      </div>
+
+      <!-- Employee lane -->
+      <div class="lane">
+        <div class="title">
+          <div class="l">Lane B</div>
+          <h3>Employee</h3>
+          <p>Acts as the guest's representative. Sees full profile + dietary + package without re-asking.</p>
+        </div>
+        <div class="col">
+          <div class="node staff"><div class="top"><span class="pill">E·01</span></div><div class="n">Reviews tonight's covers</div><div class="m">42 bookings · 3 allergy flags</div></div>
+        </div>
+        <div class="col">
+          <div class="node staff"><div class="top"><span class="pill">E·02</span></div><div class="n">Kiosk notification</div><div class="m">"Linh tapped at 19:42 · A·12"</div></div>
+          <div class="node staff"><div class="top"><span class="pill">E·03</span></div><div class="n">Greets guest at A·12</div><div class="m">Escort flag → meet at lift</div></div>
+        </div>
+        <div class="col">
+          <div class="node staff"><div class="top"><span class="pill">E·04</span></div><div class="n">Confirms / amends pre-order at table</div><div class="m">Speak-aloud verification</div></div>
+          <div class="node staff"><div class="top"><span class="pill">E·05</span></div><div class="n">Marks "seated" → fires to KDS</div><div class="m">One tap</div></div>
+        </div>
+        <div class="col">
+          <div class="node staff"><div class="top"><span class="pill">E·06</span></div><div class="n">Coordinates pacing with KDS</div><div class="m">Reds &amp; ambers visible on rail</div></div>
+        </div>
+        <div class="col">
+          <div class="node staff"><div class="top"><span class="pill">E·07</span></div><div class="n">Closes table</div><div class="m">All-incl: no bill · ext: POS bill</div></div>
+        </div>
+      </div>
+
+      <!-- System lane -->
+      <div class="lane" style="border-bottom: 0;">
+        <div class="title">
+          <div class="l">Lane C</div>
+          <h3>System</h3>
+          <p>PMS, KDS, payments and NFC/RFID hardware — exchanging state silently in the background.</p>
+        </div>
+        <div class="col">
+          <div class="node system"><div class="top"><span class="pill">PMS</span></div><div class="n">Pulls profile, package, dietary on booking</div><div class="m">Read on every screen entry</div></div>
+          <div class="node async"><div class="top"><span class="pill">ASYNC</span></div><div class="n">Suggests seat from family / accessibility flags</div><div class="m">Pre-computed nightly</div></div>
+        </div>
+        <div class="col">
+          <div class="node system"><div class="top"><span class="pill">NFC</span></div><div class="n">Card reader → booking lookup</div><div class="m">&lt;1s · fallback: manual</div></div>
+          <div class="node decision"><div class="top"><span class="pill">FORK</span></div><div class="n">External? card-on-file: yes / no</div><div class="m">If no → request card</div></div>
+        </div>
+        <div class="col">
+          <div class="node system"><div class="top"><span class="pill">KDS</span></div><div class="n">Fires order with allergen header</div><div class="m">⚠ ⚠ red banner per item</div></div>
+          <div class="node system"><div class="top"><span class="pill">PMS</span></div><div class="n">Posts charges to room bill</div><div class="m">All-incl: $0 · pay-per-item: itemised</div></div>
+        </div>
+        <div class="col">
+          <div class="node system"><div class="top"><span class="pill">KDS</span></div><div class="n">Course timer · pacing signal</div><div class="m">Floor warned if 90% target</div></div>
+          <div class="node decision"><div class="top"><span class="pill">FORK</span></div><div class="n">Substitution / 86'd?</div><div class="m">Guest notified before food fires</div></div>
+        </div>
+        <div class="col">
+          <div class="node system"><div class="top"><span class="pill">PAY</span></div><div class="n">External: charges card-on-file</div><div class="m">Receipt to guest email</div></div>
+          <div class="node async"><div class="top"><span class="pill">ASYNC</span></div><div class="n">Feedback prompt &amp; KDS post-mortem</div><div class="m">Aggregated for chef &amp; manager</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scenarios">
+    <div class="scenario">
+      <div class="l">Branch · Room service</div>
+      <h4>Same flow, different stage.</h4>
+      <p>Guest skips reservation &amp; kiosk; order goes to in-room queue with delivery window. PMS auto-fills the room number; the runner sees a separate KDS rail.</p>
+      <div class="arrow">G·02 → G·09 · skip kiosk</div>
+    </div>
+    <div class="scenario">
+      <div class="l">Branch · External diner</div>
+      <h4>No PMS profile.</h4>
+      <p>Walk-in flow asks for a card-on-file before pre-order. All-inclusive surfaces never appear. Receipts emailed; the rest of the flow is identical.</p>
+      <div class="arrow">FORK at NFC · request card</div>
+    </div>
+    <div class="scenario">
+      <div class="l">Branch · Packed lunch / takeaway</div>
+      <h4>Tomorrow, not tonight.</h4>
+      <p>Guest schedules a pick-up time; KDS receives the order during the previous evening prep. No seating, no service — kiosk shows pickup queue.</p>
+      <div class="arrow">G·02 + scheduled pick-up</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
