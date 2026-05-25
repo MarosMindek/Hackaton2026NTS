@@ -25,7 +25,6 @@ frontend/.vite/
 # ── Generated data ────────────────────────────────────────────────────────────
 # geocoded.json contains Google API results — expensive to regenerate.
 # Remove this line if you want to commit and share it across machines.
-backend/data/geocoded.json
 backend/data/geocode_report.json
 
 # ── Environment / secrets ─────────────────────────────────────────────────────
